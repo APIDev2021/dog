@@ -203,12 +203,21 @@ footer::before,
     width: 100%;
     height: 100%;
     /* opacity: 0.5; */
-    background-image: url('../images/bg_roadmap.png');
+    background-image: url('../images/bone1.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    mix-blend-mode: overlay;
+	z-index:1;
+	-webkit-animation: leaf 10s linear infinite;
+	-moz-animation: leaf 10s linear infinite;
+	-ms-animation: leaf 10s linear infinite;
+	animation: leaf 10s linear infinite;
 }
-
+@keyframes leaf {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  100% {background-position: 500px 1000px, 400px 400px, -300px 600px;}
+}
 
 .roadmap_text_shdow{
     text-shadow: .2vw .2vw 0px #000000;
@@ -221,6 +230,7 @@ footer::before,
 }
 
 .phase{
+    background-color: #ffffff;
     border: 3px solid black;
     box-shadow: 6px 6px 0px 0px #FF89C5;
 }
